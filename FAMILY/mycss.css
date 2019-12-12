@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a{text-decoration : none} 
+a:link{color: black}
+a:visited{color:#5A769E}
+a:hover{color: blue} 
+
+.red{
+    color:#E83A31; word-break: keep-all; white-space: nowrap;
+}
+
+.right{
+    text-align: right;
+}
+.float header {
+    background: #ffffff;
+    padding: 20px;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+    word-break: keep-all;
+    white-space: nowrap;
+}
+
+.float article {
+    background: rgb(255, 255, 255);
+    padding: 0px 20px 50px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:center;
+}
+
+.float footer {
+    clear: both;
+    background: #000000;
+    color: #ffffff;
+    padding: 30px;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float Responsive */
+
+.float {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+@media all and (max-width: 1024px) {
+    .float aside {
+        float: none;
+    }
+
+    .float article {
+        padding: 20px;
+    }
+}
+
+@media all and (max-width: 839px) {
+    .float {
+        margin: 0;
+        width: inherit;
+    }
+}
+
+@media all and (max-width: 480px) {
+}
+
+/* Flexbox */
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex header {
+    background: blueviolet;
+    padding: 20px;
+    flex: 0 0 100%;
+}
+
+.flex aside {
+    background: gray;
+    padding: 20px;
+    flex: 0 0 25%;
+}
+
+.flex article {
+    background: red;
+    padding: 20px;
+    flex: 1;
+}
+
+.flex footer {
+    background: blue;
+    padding: 20px;
+    flex: 0 0 100%;
+}
+
+/* CSS Grid */
+
+.grid {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 10vw 30vw 10vw;
+    grid-gap: 0;
+}
+
+.grid header {
+    background: blueviolet;
+    padding: 20px;
+    grid-column: 1 / span 2;
+}
+
+.grid article {
+    background: red;
+    padding: 20px;
+}
+
+.grid footer {
+    background: blue;
+    padding: 20px;
+    grid-column: 1 / span 2;
+
+}
